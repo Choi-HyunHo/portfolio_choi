@@ -1,14 +1,50 @@
+/* reset css */
+
 * {
   box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+  color: inherit; /* 부모의 color를 상속 받는다 */
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
+  outline: none;
+  box-shadow: none;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 body {
-  height: 300vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 .progress {
   width: 100%;
-  height: 15px;
+  height: 20px;
   position: fixed;
   top: 0;
   left: 0;
@@ -19,9 +55,122 @@ body {
 .bar {
   position: absolute;
   width: 0%;
-  height: 15px;
+  height: 20px;
   top: 0;
   left: 0;
   background-color: black;
   z-index: 11;
+}
+
+/* main */
+main {
+  padding: 0 20px;
+}
+
+/* title */
+.title {
+  margin-top: 160px;
+  margin-bottom: 100px;
+}
+.title h1 {
+  font-size: 90px;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.title p {
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+/* edu */
+.edu,
+.license,
+.active,
+.award {
+  border-bottom: 2px solid #ececec;
+}
+
+.edu,
+.license,
+.active,
+.award {
+  font-size: 40px;
+  opacity: 0.8;
+}
+
+.edu_info {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+/* license */
+.license {
+  margin-top: 160px;
+}
+
+.license_info {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* active */
+.active {
+  margin-top: 160px;
+}
+
+.active_info {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.active_info__detail {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.info_1 {
+  padding-right: 40px;
+}
+
+/* award */
+.award {
+  margin-top: 160px;
+}
+
+.award_info {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.award_info__detail {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media (min-width: 650px) {
+  main {
+    width: 700px;
+  }
+}
+
+@media (max-width: 650px) {
+  main {
+    width: 90vw;
+  }
 }

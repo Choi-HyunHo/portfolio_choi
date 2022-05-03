@@ -12,3 +12,9 @@ window.addEventListener('scroll', (e) => {
   )
   bar.style.width = per + '%'
 })
+
+function loop() {
+  window.requestAnimationFrame(loop)
+}
+
+loop()
