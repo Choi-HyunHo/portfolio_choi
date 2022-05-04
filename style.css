@@ -88,14 +88,16 @@ main {
 .edu,
 .license,
 .active,
-.award {
+.award,
+.work {
   border-bottom: 2px solid #ececec;
 }
 
 .edu,
 .license,
 .active,
-.award {
+.award,
+.work {
   font-size: 40px;
   opacity: 0.8;
 }
@@ -106,6 +108,12 @@ main {
   justify-content: space-between;
   font-size: 20px;
   margin-bottom: 50px;
+}
+
+.edu_info__detail {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 /* license */
@@ -161,6 +169,44 @@ main {
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+
+/* work */
+.work {
+  width: 100%;
+  margin-top: 160px;
+}
+
+.work_info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  margin-bottom: 50px;
+}
+
+.work_info__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.work_info__title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.work_info__subtitle {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.work_info__desc {
+  font-size: 16px;
+}
+
+.work_info__stack {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 650px) {
