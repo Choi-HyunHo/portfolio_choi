@@ -42,6 +42,10 @@ a:hover {
   border-bottom: 2px solid black;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   display: flex;
   flex-direction: column;
