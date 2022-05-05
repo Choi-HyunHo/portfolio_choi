@@ -11,10 +11,9 @@ window.addEventListener('scroll', (e) => {
     (scrollTop / (document.body.scrollHeight - window.outerHeight)) * 100
   )
   bar.style.width = per + '%'
+  loop()
 })
 
 function loop() {
   window.requestAnimationFrame(loop)
 }
-
-loop()

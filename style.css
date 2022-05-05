@@ -6,6 +6,10 @@
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: inherit; /* 부모의 color를 상속 받는다 */
   text-decoration: none;
@@ -14,7 +18,6 @@ a {
 button,
 input,
 textarea {
-  font-family: 'DM Sans', sans-serif;
   font-size: 16px;
 }
 
@@ -31,9 +34,12 @@ textarea:active {
 ul,
 ol,
 li {
-  list-style-type: none;
   padding-left: 0;
   margin-left: 0;
+}
+
+a:hover {
+  border-bottom: 2px solid black;
 }
 
 body {
@@ -42,6 +48,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .progress {
   width: 100%;
   height: 20px;
@@ -88,8 +95,7 @@ main {
 .edu,
 .license,
 .active,
-.award,
-.work {
+.award {
   border-bottom: 2px solid #ececec;
 }
 
@@ -97,13 +103,14 @@ main {
 .license,
 .active,
 .award,
-.work {
+.work,
+.etc {
   font-size: 40px;
   opacity: 0.8;
 }
 
 .edu_info {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   font-size: 20px;
@@ -122,7 +129,7 @@ main {
 }
 
 .license_info {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   font-size: 20px;
@@ -135,7 +142,7 @@ main {
 }
 
 .active_info {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   font-size: 20px;
@@ -148,9 +155,9 @@ main {
   text-align: center;
 }
 
-.info_1 {
+/* .info_1 {
   padding-right: 40px;
-}
+} */
 
 /* award */
 .award {
@@ -158,7 +165,7 @@ main {
 }
 
 .award_info {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   font-size: 20px;
@@ -201,12 +208,41 @@ main {
 }
 
 .work_info__desc {
-  font-size: 16px;
+  font-size: 18px;
+  margin-bottom: 100px;
 }
 
 .work_info__stack {
   display: flex;
   flex-direction: column;
+}
+
+.work_info__stack span:first-child {
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.work_info__stack:last-child {
+  padding-bottom: 30px;
+  border-bottom: 2px solid #ececec;
+}
+
+/* etc */
+.etc {
+  width: 100%;
+  margin-top: 160px;
+}
+
+.etc_info {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.etc ul li {
+  margin-bottom: 10px;
 }
 
 @media (min-width: 650px) {
@@ -216,7 +252,110 @@ main {
 }
 
 @media (max-width: 650px) {
+  .progress {
+    height: 10px;
+  }
+
+  .bar {
+    height: 10px;
+  }
+
   main {
-    width: 90vw;
+    width: 100vw;
+    padding: 0 20px;
+  }
+
+  /* title */
+  .title {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .title h1 {
+    font-size: 42px;
+    font-weight: bold;
+  }
+
+  .title p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.8;
+  }
+
+  /* edu */
+  .edu,
+  .license,
+  .active,
+  .award,
+  .work,
+  .etc {
+    font-size: 22px;
+    opacity: 0.8;
+  }
+
+  .edu_info {
+    font-size: 16px;
+  }
+
+  /* license */
+  .license {
+    margin-top: 100px;
+  }
+
+  .license_info {
+    font-size: 16px;
+  }
+
+  /* active */
+  .active {
+    margin-top: 100px;
+  }
+  .active_info {
+    font-size: 16px;
+  }
+
+  .info_1 {
+    padding-right: 0;
+  }
+
+  .award {
+    margin-top: 100px;
+  }
+
+  .award_info {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+
+  /* work */
+  .work {
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .work_info__subtitle {
+    font-size: 18px;
+    opacity: 0.8;
+  }
+
+  .work_info__desc {
+    font-size: 16px;
+  }
+
+  .work_info__stack span:first-child {
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+
+  /* etc */
+  .etc {
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .etc ul {
+    padding-left: 20px;
   }
 }
