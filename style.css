@@ -71,6 +71,7 @@ body {
   left: 0;
   background-color: black;
   z-index: 11;
+  transition: width 0.3s ease;
 }
 
 /* main */
@@ -184,19 +185,18 @@ main {
 
 /* work */
 .work {
-  width: 100%;
   margin-top: 160px;
 }
 
 .work_info {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   font-size: 22px;
   margin-bottom: 50px;
 }
 
 .work_info__container {
-  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -242,7 +242,11 @@ main {
 .etc_info {
   display: flex;
   flex-direction: column;
-  font-size: 18px;
+  font-size: 16px;
+}
+
+.etc ul {
+  padding-left: 40px;
 }
 
 .etc ul li {
